@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Інтернет-магазин та реєстрація</title>
+    <link
+      rel="stylesheet"
+      href="dist/css/style.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="store">
+        <h1>Інтернет-магазин</h1>
+        <div class="left">
+          <h2>Категорії</h2>
+          <ul id="categoriesList"></ul>
+        </div>
+        <div class="center">
+          <h2>Товари</h2>
+          <ul id="productsList"></ul>
+        </div>
+        <div class="right">
+          <h2>Інформація про товар</h2>
+          <div id="productInfo"></div>
+        </div>
+      </div>
+      <div
+        id="orderFormContainer"
+        class="hidden">
+        <h1>Оформлення замовлення</h1>
+        <form id="orderForm">
+          <div class="form-group">
+            <label for="buyerName">ПІБ покупця:</label>
+            <input
+              type="text"
+              id="buyerName"
+              name="buyerName"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="city">Місто:</label>
+            <select
+              id="city"
+              name="city"
+              required>
+              <option value="Київ">Київ</option>
+              <option value="Львів">Львів</option>
+              <option value="Одеса">Одеса</option>
+              <option value="Харків">Харків</option>
+              <option value="Дніпро">Дніпро</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="warehouse">Склад Нової пошти:</label>
+            <input
+              type="text"
+              id="warehouse"
+              name="warehouse"
+              required />
+          </div>
+          <div class="form-group">
+            <label>Спосіб оплати:</label>
+            <label
+              ><input
+                type="radio"
+                name="paymentMethod"
+                value="Післяплата"
+                required />
+              Післяплата</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="paymentMethod"
+                value="Оплата банківською карткою"
+                required />
+              Оплата банківською карткою</label
+            >
+          </div>
+          <div class="form-group">
+            <label for="quantity">Кількість продукції:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="comment">Коментар до замовлення:</label>
+            <textarea
+              id="comment"
+              name="comment"
+              rows="3"></textarea>
+          </div>
+          <button type="submit">Підтвердити замовлення</button>
+        </form>
+        <div id="orderResult"></div>
+      </div>
+      <div class="registration">
+        <h1>Форма реєстрації</h1>
+        <form id="registrationForm">
+          <div class="form-group">
+            <label for="firstName">Ім'я:</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Прізвище:</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              required />
+          </div>
+          <div class="form-group">
+            <label for="dob">Дата народження:</label>
+            <input
+              type="date"
+              id="dob"
+              name="dob"
+              required />
+          </div>
+          <div class="form-group">
+            <label>Стать:</label>
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="Чоловік"
+                required />
+              Чоловік</label
+            >
+            <label
+              ><input
+                type="radio"
+                name="gender"
+                value="Жінка"
+                required />
+              Жінка</label
+            >
+          </div>
+          <div class="form-group">
+            <label for="city">Місто:</label>
+            <select
+              id="city"
+              name="city"
+              required>
+              <option value="Київ">Київ</option>
+              <option value="Львів">Львів</option>
+              <option value="Одеса">Одеса</option>
+              <option value="Харків">Харків</option>
+              <option value="Дніпро">Дніпро</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="address">Адреса:</label>
+            <textarea
+              id="address"
+              name="address"
+              rows="3"
+              required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Мови, якими володієте:</label>
+            <label
+              ><input
+                type="checkbox"
+                name="languages"
+                value="Українська" />
+              Українська</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="languages"
+                value="Англійська" />
+              Англійська</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="languages"
+                value="Німецька" />
+              Німецька</label
+            >
+            <label
+              ><input
+                type="checkbox"
+                name="languages"
+                value="Французька" />
+              Французька</label
+            >
+          </div>
+          <button type="submit">Зберегти</button>
+        </form>
+        <div
+          id="resultContainer"
+          class="hidden"></div>
+      </div>
+    </div>
+    <script src="dist/js/script.min.js"></script>
+  </body>
+</html>
