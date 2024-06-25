@@ -122,3 +122,22 @@ input[type="checkbox"] {
 #productInfo {
   text-align: center;
 }
+
+#ordersContainer {
+  display: none;
+  background: #adad8e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.order-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.order-item button {
+  margin-left: 10px;
+}

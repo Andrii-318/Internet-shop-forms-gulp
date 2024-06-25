@@ -13,6 +13,7 @@
   <body>
     <div class="container">
       <div class="store">
+        <button id="viewOrdersBtn">Мої замовлення</button>
         <h1>Інтернет-магазин</h1>
         <div class="left">
           <h2>Категорії</h2>
@@ -98,6 +99,12 @@
           <button type="submit">Підтвердити замовлення</button>
         </form>
         <div id="orderResult"></div>
+      </div>
+      <div
+        id="ordersContainer"
+        class="hidden">
+        <h2>Мої замовлення</h2>
+        <ul id="ordersList"></ul>
       </div>
       <div class="registration">
         <h1>Форма реєстрації</h1>
@@ -204,6 +211,6 @@
           class="hidden"></div>
       </div>
     </div>
-    <script src="dist/js/script.min.js"></script>
+    <script src="src/script.js"></script>
   </body>
 </html>
